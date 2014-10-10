@@ -1,0 +1,43 @@
+
+@font-face {
+    font-family: "U8_Black";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/U8-Black.eot?#iefix") format("embedded-opentype"), url("fonts/U8-Black.woff") format("woff");
+}
+@font-face {
+    font-family: "U8_Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/U8-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/U8-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "U8_Hairline";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/U8-Hairline.eot?#iefix") format("embedded-opentype"), url("fonts/U8-Hairline.woff") format("woff");
+}
+@font-face {
+    font-family: "U8_Light";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/U8-Light.eot?#iefix") format("embedded-opentype"), url("fonts/U8-Light.woff") format("woff");
+}
+@font-face {
+    font-family: "U8_Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/U8-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/U8-Medium.woff") format("woff");
+}
+@font-face {
+    font-family: "U8_Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/U8-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/U8-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "U8_Thin";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/U8-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/U8-Thin.woff") format("woff");
+}
