@@ -66,7 +66,7 @@ button {
     padding: 0;
 }
 .nav > ul {
-    width: 475px;
+    width: 620px;
 }
 .nav > ul > li {
     display: inline;
@@ -74,13 +74,16 @@ button {
     width: 112px;
 }
 .nav > ul > li.collaborations {
-    width: 159px;
+    width: 125px;
 }
 .nav > ul > li.about {
-    width: 91px;
+    width: 125px;
 }
 .nav > ul > li.contact {
-    width: 108px;
+    width: 125px;
+}
+.nav > ul > li.story {
+    width: 125px;
 }
 .nav li {
     display: inline;
