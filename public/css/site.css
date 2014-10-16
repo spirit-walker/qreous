@@ -843,7 +843,7 @@ button {
 }
 .actions {
     background: none repeat scroll 0 0 #fff;
-    bottom: 40px;
+    bottom: 0px;
     left: 0;
     position: fixed;
     width: 100%;
