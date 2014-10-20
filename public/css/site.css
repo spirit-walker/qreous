@@ -42,7 +42,7 @@ button {
 .header {
     background: none repeat scroll 0 0 #fff;
     left: 0;
-    min-height: 60px;
+    /*min-height: 60px;*/
     min-width: 768px;
     overflow: hidden;
     position: fixed;
@@ -62,7 +62,7 @@ button {
 }
 .nav ul {
     list-style-type: none;
-    margin: 30px 0 0;
+    margin: 0;
     padding: 0;
 }
 .nav > ul {
@@ -97,6 +97,7 @@ button {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    line-height: 40px;
 }
 .nav a.first:link, .nav a.first:visited {
     margin-left: 0;
