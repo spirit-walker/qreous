@@ -1,0 +1,21 @@
+.side-bar-toggle {
+    background-image: url(/public/images/side-bar-toggle.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+.sidebar {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -290px;
+    bottom: 0;
+}
+
+.nav ul li {
+    float: right;
+}
+
+.nav ul li .side-bar-toggle{
+    cursor: pointer;
+}
