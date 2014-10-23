@@ -10,6 +10,39 @@
     top: 0;
     right: -290px;
     bottom: 0;
+    transition: 0.12s -webkit-transform ease-out;
+    background-color: #1f1f1f;
+    overflow: scroll;
+    padding-top: 60px;
+    list-style-type: none;
+}
+
+.sidebar li{
+    width: 290px;
+    height: 200px;
+    padding: 140px 30px 10px 30px;
+    margin: 0;
+    color: #c2c2c2;
+    position: relative;
+}
+.sidebar li a {
+    width: 230px;
+    height: 200px;
+    float: left;
+    padding: 20px 30px 70px 30px;
+    border: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.sidebar li img {
+    width: 170px;
+    height: 110px;
+    background-color: #141414;
+    border: none;
+    outline: none;
 }
 
 .nav ul li {
