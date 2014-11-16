@@ -1,3 +1,12 @@
+//work around for keeping sidebar when window is resized
+$('head').ready(function(){
+    console.log($(window).width());
+    var sidebarWrapper = $("#sidebar-wrapper");
+    var x = $(window).width() - 50;
+    console.log(x);
+    sidebarWrapper.css("-webkit-transform","translate3d(" + x + "px, 35px, 0px)");
+});
+
 function clickSidebar0(el){
     var closeToggle = $(el);
     $('#sidebar-0').css('-webkit-transform', 'translate3d(0px, 0px, 0px) rotateY(-95deg)');
@@ -9,8 +18,9 @@ function clickSidebar0(el){
         tooltips.css("-webkit-transform","translate3d(-163px, 0px, 0px)");
         var sidebarContent = $('#sidebar-content');
         sidebarContent.css("-webkit-transform","translate3d(1366px, 0px, 0px)");
+        var x = $(window).width() - 50;
         var sidebarWrapper = $("#sidebar-wrapper");
-        sidebarWrapper.css("-webkit-transform","translate3d(1316px, 35px, 0px)");
+        sidebarWrapper.css("-webkit-transform","translate3d(" + x + "px, 35px, 0px)");
     }, 500);
 }
 
