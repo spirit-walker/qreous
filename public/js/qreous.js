@@ -11,6 +11,7 @@ function clickSidebar0(el){
     var closeToggle = $(el);
     $('#sidebar-0').css('-webkit-transform', 'translate3d(0px, 0px, 0px) rotateY(-95deg)');
     setTimeout(function(){
+        var x = $(window).width() - 50;
         var tootle = $('#sidebar-1');
         tootle.css("-webkit-transform","translate3d(0px, 50px, 0px)");
         var tooltips = closeToggle.children("div").first();
@@ -18,7 +19,7 @@ function clickSidebar0(el){
         tooltips.css("-webkit-transform","translate3d(-163px, 0px, 0px)");
         var sidebarContent = $('#sidebar-content');
         sidebarContent.css("-webkit-transform","translate3d(1366px, 0px, 0px)");
-        var x = $(window).width() - 50;
+
         var sidebarWrapper = $("#sidebar-wrapper");
         sidebarWrapper.css("-webkit-transform","translate3d(" + x + "px, 35px, 0px)");
     }, 500);
@@ -64,3 +65,59 @@ function hoverSidebar1(el, mousein){
         tooltips.css("-webkit-transform","translate3d(-163px, 0px, 0px)");
     }
 }
+
+( function( $ ) {
+    $( document ).ready(function() {
+        $('#cssmenu').click(function(){alert('click')});
+        $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
+        var activeElement = $('#cssmenu>ul>li:first');
+
+        $('#cssmenu>ul>li').each(function() {
+            if ($(this).hasClass('active')) {
+                activeElement = $(this);
+            }
+        });
+
+
+        var posLeft = activeElement.position().left;
+        var elementWidth = activeElement.width();
+        posLeft = posLeft + elementWidth/2 -6;
+        if (activeElement.hasClass('has-sub')) {
+            posLeft -= 6;
+        }
+
+        $('#cssmenu #pIndicator').css('left', posLeft);
+        var element, leftPos, indicator = $('#cssmenu pIndicator');
+
+
+        $("#cssmenu>ul>li").hover(function() {
+                alert(3);
+                element = $(this);
+                var w = element.width();
+                if ($(this).hasClass('has-sub'))
+                {
+                    leftPos = element.position().left + w/2 - 12;
+                }
+                else {
+                    leftPos = element.position().left + w/2 - 6;
+                }
+
+                $('#cssmenu #pIndicator').css('left', leftPos);
+            }
+            , function() {
+                alert(4);
+                $('#cssmenu #pIndicator').css('left', posLeft);
+            });
+
+        $('#cssmenu>ul').prepend('<li id="menu-button"><a>Menu</a></li>');
+        $( "#menu-button" ).click(function(){
+            alert(5);
+            if ($(this).parent().hasClass('open')) {
+                $(this).parent().removeClass('open');
+            }
+            else {
+                $(this).parent().addClass('open');
+            }
+        });
+    });
+} )( jQuery );
