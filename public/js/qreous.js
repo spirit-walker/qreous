@@ -1,9 +1,7 @@
 //work around for keeping sidebar when window is resized
 $('head').ready(function(){
-    console.log($(window).width());
     var sidebarWrapper = $("#sidebar-wrapper");
     var x = $(window).width() - 50;
-    console.log(x);
     sidebarWrapper.css("-webkit-transform","translate3d(" + x + "px, 35px, 0px)");
 });
 
@@ -68,7 +66,6 @@ function hoverSidebar1(el, mousein){
 
 ( function( $ ) {
     $( document ).ready(function() {
-        $('#cssmenu').click(function(){alert('click')});
         $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
         var activeElement = $('#cssmenu>ul>li:first');
 
@@ -89,9 +86,7 @@ function hoverSidebar1(el, mousein){
         $('#cssmenu #pIndicator').css('left', posLeft);
         var element, leftPos, indicator = $('#cssmenu pIndicator');
 
-
         $("#cssmenu>ul>li").hover(function() {
-                alert(3);
                 element = $(this);
                 var w = element.width();
                 if ($(this).hasClass('has-sub'))
@@ -101,17 +96,15 @@ function hoverSidebar1(el, mousein){
                 else {
                     leftPos = element.position().left + w/2 - 6;
                 }
-
+                console.log(leftPos);
                 $('#cssmenu #pIndicator').css('left', leftPos);
             }
             , function() {
-                alert(4);
                 $('#cssmenu #pIndicator').css('left', posLeft);
             });
 
         $('#cssmenu>ul').prepend('<li id="menu-button"><a>Menu</a></li>');
         $( "#menu-button" ).click(function(){
-            alert(5);
             if ($(this).parent().hasClass('open')) {
                 $(this).parent().removeClass('open');
             }
